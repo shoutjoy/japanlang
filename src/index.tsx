@@ -121,7 +121,7 @@ function App(){
   const [settings,setSettings]=useState<AISettings>({provider:"lmstudio",baseUrl:"http://127.0.0.1:1234",apiKey:"",model:"",temperature:.4,maxTokens:2048,rememberKey:false});
   const [models,setModels]=useState<string[]>([]),[aiStatus,setAIStatus]=useState(""),[chat,setChat]=useState<ChatMessage[]>([]),[chatInput,setChatInput]=useState(""),[aiBusy,setAIBusy]=useState(false),[genMode,setGenMode]=useState<AttemptType>("word"),[genCount,setGenCount]=useState(5);
   const [noteTitle,setNoteTitle]=useState("일본어 AI 학습 노트"),[noteBody,setNoteBody]=useState("# 일본어 AI 학습 노트\n\n오늘 배운 표현과 AI 답변을 기록하세요."),[noteSavedAt,setNoteSavedAt]=useState(""),[noteReady,setNoteReady]=useState(false);
-  const [voices,setVoices]=useState<SpeechSynthesisVoice[]>([]),[voiceURI,setVoiceURI]=useState(""),[voiceMode,setVoiceMode]=useState<VoiceMode>("voicevox");
+  const [voices,setVoices]=useState<SpeechSynthesisVoice[]>([]),[voiceURI,setVoiceURI]=useState(""),[voiceMode,setVoiceMode]=useState<VoiceMode>("browser");
   const [voicevoxSpeakers,setVoicevoxSpeakers]=useState<VoicevoxSpeaker[]>([]),[voicevoxSpeaker,setVoicevoxSpeaker]=useState(30),[voicevoxStatus,setVoicevoxStatus]=useState("확인 중");
   const [strokePackStatus,setStrokePackStatus]=useState("확인 중"),[strokePackBusy,setStrokePackBusy]=useState(false),[strokePackProgress,setStrokePackProgress]=useState({done:0,total:0});
   const [readingQueue,setReadingQueue]=useState<KanaItem[]>([]),[readCounts,setReadCounts]=useState<Record<string,number>>({});
